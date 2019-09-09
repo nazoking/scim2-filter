@@ -1,11 +1,18 @@
 {
   "name": "scim2-filter",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "scim 2.0 filter parser",
   "main": "lib/src/index.js",
   "directories": {
     "test": "test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazoking/scim2-filter.git"
+  },
+  "keywords": [
+    "scim"
+  ],
   "scripts": {
     "watch": "mocha -r ts-node/register  'test/**/*.ts' 'src/**/*.ts' -w --watch-extensions ts",
     "build": "tsc",

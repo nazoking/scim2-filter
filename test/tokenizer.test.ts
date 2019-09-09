@@ -1,7 +1,5 @@
 import "mocha";
-import {
-  tokenizer,
-  Token} from "../src";
+import { tokenizer, Token } from "../src/parser";
 import { EOT } from './test_util';
 import chai = require("chai");
 const assert = chai.assert;

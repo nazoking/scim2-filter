@@ -7,7 +7,7 @@ const test = (text: string, e: Filter) => {
     assert.deepEqual(parse(text), e);
   });
 };
-describe('build', () =>{
+describe('parse', () =>{
   describe("logic", () => {
     function to_s(f: Filter): any {
       switch (f.op) {
