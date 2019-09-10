@@ -3,7 +3,7 @@ import { Filter, Compare } from "./index";
 type CompValue = Compare["compValue"];
 
 export class Tester {
-  constructor(){}
+  constructor() {}
   static readonly UNDEF = Symbol("undefined");
   test(r: any, f: Filter): boolean {
     switch (f.op) {
@@ -79,10 +79,10 @@ export class Tester {
     return v !== null && r >= v;
   }
   sw(r: any, v: CompValue): boolean {
-    return typeof v === "string" && r.toString().startsWith(v);
+    return v !== null && r !== null && r.toString().startsWith(v.toString());
   }
   ew(r: any, v: CompValue): boolean {
-    return typeof v === "string" && r.toString().endsWith(v);
+    return v !== null && r !== null && r.toString().endsWith(v.toString());
   }
   // The entire operator value must be a substring of the attribute value for a match.
   co(r: any, v: CompValue): boolean {
