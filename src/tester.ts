@@ -1,4 +1,4 @@
-import { Filter, Compare } from "./index";
+import { Filter, Compare } from ".";
 
 type CompValue = Compare["compValue"];
 

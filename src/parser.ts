@@ -1,4 +1,4 @@
-import { Filter, Compare, NotFilter, Suffix, ValuePath } from "./index";
+import { Filter, Compare, NotFilter, Suffix, ValuePath } from ".";
 
 type TokenType = "Number" | "Quoted" | "Blacket" | "Word" | "EOT";
 const EOT = { type: "EOT" as TokenType, literal: "" };
