@@ -42,6 +42,33 @@ describe("attrPath", () => {
     ok({ h: false }, `h lt true`);
     ok({ h: null }, `not(h lt false)`);
   });
+  describe("le", () => {
+    ok({ a: "abc" }, `a le "c"`);
+    ok({ a: "abc" }, `not(a le "a")`);
+    ok({ a: 3141 }, "a le 9999");
+    ok({ a: 3 }, "a le 3");
+    ok({ h: false }, `h le true`);
+  });
+
+  describe("gt", () => {
+    ok({a: "def"}, `a gt "c"`);
+    ok({a: "def"}, `not(a gt "e")`);
+    ok({a: 3}, `not(a gt "4")`);
+    ok({a: 3123}, `a gt 3122`);
+    ok({a: 3123}, `not(a gt 3123)`);
+    ok({a:false}, `not(a gt true)`);
+    ok({a:null}, `not(a gt false)`);
+  });
+
+  describe("ge", () => {
+    ok({a: "def"}, `a ge "c"`);
+    ok({a: "def"}, `not(a ge "e")`);
+    ok({a: 3}, `not(a ge "4")`);
+    ok({a: 3123}, `a ge 3122`);
+    ok({a: 3123}, `a ge 3123`);
+    ok({a:false}, `not(a ge true)`);
+  });
+
   describe("ignore case (attrPath)", () => {
     ok({ A: 1 }, "A eq 1");
     ok({ A: 1 }, "a eq 1");

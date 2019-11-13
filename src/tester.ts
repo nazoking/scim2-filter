@@ -72,10 +72,10 @@ export class Tester {
   lt(r: any, v: CompValue): boolean {
     return v !== null && r < v;
   }
-  ge(r: any, v: CompValue): boolean {
+  le(r: any, v: CompValue): boolean {
     return v !== null && r <= v;
   }
-  le(r: any, v: CompValue): boolean {
+  ge(r: any, v: CompValue): boolean {
     return v !== null && r >= v;
   }
   sw(r: any, v: CompValue): boolean {
