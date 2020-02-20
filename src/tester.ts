@@ -8,9 +8,9 @@ export class Tester {
   test(r: any, f: Filter): boolean {
     switch (f.op) {
       case "or":
-        return f.filters.some(c => this.test(f, c));
+        return f.filters.some(c => this.test(r, c));
       case "and":
-        return f.filters.every(c => this.test(f, c));
+        return f.filters.every(c => this.test(r, c));
       case "not":
         return !this.test(r, f.filter);
       case "[]":
